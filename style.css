@@ -1,0 +1,118 @@
+* {
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+    font-family: 'arial';
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7fb;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem 5rem;
+    border-radius: 15PX;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.results div {
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+
+
+    img {
+        width: 100px;
+    }
+
+}
+
+.user-result img {
+    transform: rotate(90deg);
+
+}
+
+.computer-result img {
+    transform: rotate(-90deg) rotateY(180deg);
+
+
+}
+
+.result-text {
+    text-align: center;
+    color: #1a07ed;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.container.start .user-result  {
+    transform-origin: left;
+    animation: usershakes 0.7s ease-in-out infinite;
+
+}
+
+@keyframes usershakes {
+    50% {
+        transform: rotate(10deg);
+    }
+
+}
+
+.container.start .computer-result {
+    transform-origin: right;
+    animation: computershakes 0.7s ease-in-out infinite;
+
+}
+
+@keyframes computershakes {
+    50% {
+        transform: rotate(-10deg);
+    }
+
+}
+.options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        p {
+            color: #1a07ed;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+
+        }
+    }
+
+    .option-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0.5;
+        transition: 0.5s ease;
+
+        img {
+            width: 70px;
+        }
+
+
+    }
+
+    .option-image:hover {
+        opacity: 1;
+
+    }
